@@ -4,99 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Classroom</title>
-    <link rel="icon" href="https://example.com/path/to/your/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://example.com/path/to/favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .open-window {
+            padding: 20px;
             background-color: #f0f0f0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .school-name {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .modal-content {
-            background-color: #fefefe;
-            margin: 10% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            border-radius: 10px;
-        }
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
+            border: 1px solid #ccc;
+            display: inline-block;
             cursor: pointer;
         }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1 class="school-name">School 10283</h1>
-        <button id="openChat">Open Chat</button>
-        <div id="chatModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <!-- You can include additional content here -->
-                <iframe src="https://chat.openai.com" frameborder="0" style="width: 100%; height: 400px;"></iframe>
-            </div>
-        </div>
-    </div>
-
     <script>
-        // Get the modal
-        var modal = document.getElementById("chatModal");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("openChat");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
+        function openChatWindow() {
+            window.open("https://chat.openai.com/?q=hi", "_blank", "width=400, height=400");
         }
     </script>
+</head>
+<body>
+    <h1>School 10283</h1>
+    <div class="open-window" onclick="openChatWindow()">Open Chat Window</div>
 </body>
 </html>
