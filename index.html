@@ -20,32 +20,24 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .embed-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-        }
-        .embed-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
         .school-name {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 20px;
         }
+        .chat-object {
+            width: 100%;
+            height: 500px; /* Set height as needed */
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="coolthing">School 10283</h1>
-        <div class="embed-container">
-            <iframe src="https://chat.openai.com" frameborder="0" allowfullscreen></iframe>
-        </div>
+        <h1 class="school-name">School 10283</h1>
+        <object class="chat-object" data="https://chat.openai.com" type="text/html">
+            <!-- Fallback content in case the browser doesn't support object tag -->
+            <p>Sorry, your browser doesn't support embedded content.</p>
+        </object>
     </div>
 </body>
 </html>
