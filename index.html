@@ -11,22 +11,14 @@
             text-align: center;
             margin-top: 50px;
         }
-        .open-window {
-            padding: 20px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            display: inline-block;
-            cursor: pointer;
-        }
     </style>
     <script>
-        function openChatWindow() {
+        window.onload = function() {
             window.open("https://chat.openai.com/?q=hi", "_blank", "width=400, height=400");
-        }
+        };
     </script>
 </head>
 <body>
     <h1>School 10283</h1>
-    <div class="open-window" onclick="openChatWindow()">Open Chat Window</div>
 </body>
 </html>
